@@ -239,6 +239,97 @@
   .btn{border:none;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;}
   .btn-primary{color:#fff;background:linear-gradient(150deg,var(--blue),var(--blue-deep));box-shadow:4px 4px 10px var(--shadow-d);}
   .btn-primary[disabled]{opacity:.65;cursor:default;}
+
+  /* ---------- Unibox ---------- */
+  .chip-teal{background:rgba(31,182,201,.15);color:#128FA0;}
+  .chip-amber{background:rgba(227,160,8,.16);color:#9a6a00;}
+  .nav-badge{margin-left:auto;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--red);color:#fff;font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
+  .bn-item{position:relative;}
+  .bn-item .nav-badge{position:absolute;top:0;right:16px;margin:0;}
+  .pill .count{font-variant-numeric:tabular-nums;opacity:.75;margin-left:3px;}
+  .u-select{
+    border:none;padding:9px 34px 9px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink-soft);max-width:100%;
+    background:linear-gradient(150deg,var(--surface-2),var(--surface)) ;box-shadow:5px 5px 10px var(--shadow-d), -5px -5px 10px var(--shadow-l);
+    -webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235C6C8F' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"),linear-gradient(150deg,var(--surface-2),var(--surface));
+    background-repeat:no-repeat;background-position:right 13px center,0 0;
+  }
+  @media (min-width:900px){.u-tools{margin-left:auto;}}
+
+  .u-setup{margin-top:20px;padding:26px;display:flex;flex-direction:column;gap:12px;}
+  .u-setup h2{font-family:var(--font-display);font-weight:600;font-size:20px;}
+  .u-setup p,.u-setup li{font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  .u-setup ol{padding-left:20px;}
+  .u-setup code{background:rgba(61,111,224,.1);color:var(--blue-deep);padding:1px 6px;border-radius:6px;font-weight:700;font-size:12px;}
+  .u-setup .btn{align-self:flex-start;}
+
+  .u-shell{margin-top:20px;display:flex;height:calc(100vh - 230px);min-height:460px;overflow:hidden;}
+  .u-list{width:340px;flex-shrink:0;min-height:0;display:flex;flex-direction:column;border-right:1px solid rgba(61,111,224,.12);}
+  .u-search{padding:14px 14px 8px;display:flex;gap:8px;align-items:center;flex-shrink:0;}
+  .u-search input{
+    flex:1;min-width:0;border:none;padding:10px 14px;border-radius:14px;font-size:13px;color:var(--ink);
+    background:var(--surface);box-shadow:inset 2px 2px 5px var(--shadow-d), inset -2px -2px 5px var(--shadow-l);
+  }
+  .u-link{border:none;background:none;font-size:11.5px;font-weight:700;color:var(--blue-deep);white-space:nowrap;padding:4px;}
+  .u-items{flex:1;min-height:0;overflow-y:auto;padding:4px 8px 8px;scrollbar-width:thin;scrollbar-color:rgba(61,111,224,.35) transparent;}
+  .u-item{display:flex;gap:11px;padding:12px 10px;border-radius:16px;cursor:pointer;margin-bottom:3px;border:none;background:none;width:100%;text-align:left;}
+  .u-item:hover{background:rgba(61,111,224,.06);}
+  .u-item.active{background:rgba(61,111,224,.12);}
+  .avatar{width:38px;height:38px;border-radius:13px;flex-shrink:0;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;position:relative;}
+  .avatar .udot{position:absolute;top:-3px;right:-3px;width:11px;height:11px;border-radius:50%;background:var(--red);border:2px solid #fff;}
+  .u-item-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;}
+  .u-item-top{display:flex;align-items:baseline;gap:8px;}
+  .u-item-name{flex:1;min-width:0;font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-item.unread .u-item-name{font-weight:800;}
+  .u-item-time{font-size:11px;color:var(--ink-faint);flex-shrink:0;}
+  .u-item.unread .u-item-time{color:var(--blue-deep);font-weight:700;}
+  .u-item-biz{font-size:11.5px;color:var(--ink-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-item-snip{font-size:12px;color:var(--ink-faint);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-item.unread .u-item-snip{color:var(--ink-soft);}
+  .u-item-meta{display:flex;gap:6px;align-items:center;margin-top:2px;min-width:0;}
+  .u-item-box{font-size:10.5px;color:var(--ink-faint);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-empty{padding:34px 16px;text-align:center;font-size:12.5px;color:var(--ink-faint);}
+
+  .u-view{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;}
+  .u-placeholder{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--ink-faint);font-size:13px;text-align:center;padding:30px;}
+  .u-conv{flex:1;min-height:0;display:flex;flex-direction:column;}
+  .u-conv-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(61,111,224,.12);flex-shrink:0;}
+  .u-back{display:none;border:none;background:none;font-size:26px;color:var(--blue-deep);line-height:1;padding:0 4px 0 0;}
+  .u-conv-who{flex:1;min-width:0;}
+  .u-conv-name{font-weight:800;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-conv-sub{font-size:11.5px;color:var(--ink-soft);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-status{
+    border:none;border-radius:999px;padding:8px 30px 8px 13px;font-size:12px;font-weight:800;flex-shrink:0;
+    -webkit-appearance:none;appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 11px center;
+  }
+  .u-status:disabled{cursor:not-allowed;opacity:.75;}
+  .u-subject{padding:12px 18px 0;font-size:12.5px;font-weight:700;color:var(--ink-soft);flex-shrink:0;}
+  .u-msgs{flex:1;min-height:0;overflow-y:auto;padding:14px 18px 18px;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin;scrollbar-color:rgba(61,111,224,.35) transparent;}
+  .msg{max-width:80%;padding:11px 14px;border-radius:18px;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;flex-shrink:0;}
+  .msg-sent{align-self:flex-end;background:linear-gradient(150deg,var(--blue),var(--blue-deep));color:#fff;border-bottom-right-radius:5px;}
+  .msg-received{align-self:flex-start;background:var(--surface-2);color:var(--ink);box-shadow:3px 3px 8px var(--shadow-d);border-bottom-left-radius:5px;}
+  .msg-meta{font-size:10.5px;opacity:.75;margin-bottom:4px;font-weight:700;white-space:normal;}
+
+  @media (max-width:899px){
+    .u-shell{height:calc(100vh - 250px);}
+    .u-list{width:100%;border-right:none;}
+    .u-view{display:none;}
+    .u-shell.show-conv .u-list{display:none;}
+    .u-shell.show-conv .u-view{display:flex;}
+    .u-back{display:inline-block;}
+    .msg{max-width:90%;}
+  }
+
+  .toast{
+    position:fixed;z-index:100;right:20px;bottom:24px;max-width:min(360px,calc(100vw - 32px));
+    padding:12px 16px;border-radius:16px;font-size:13px;font-weight:600;color:#fff;background:#152447;
+    box-shadow:0 12px 30px rgba(21,36,71,.35);cursor:pointer;animation:toastIn .25s ease;
+  }
+  .toast.error{background:#c8433f;}
+  @keyframes toastIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  @media (max-width:899px){.toast{left:16px;right:16px;bottom:100px;}}
 </style>
 </head>
 <body>
@@ -262,7 +353,7 @@
       </button>
       <button class="nav-item" type="button" data-view="unibox">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 3h6l2-3h4"></path><path d="M5 12 3 19a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1l-2-7"></path><path d="M5 12 7 5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1l2 7"></path></svg>
-        Unibox <span class="soon">Soon</span>
+        Unibox <span class="nav-badge" data-unread-badge hidden></span>
       </button>
     </nav>
   </aside>
@@ -276,6 +367,7 @@
     <button class="bn-item" type="button" data-view="unibox">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 3h6l2-3h4"></path><path d="M5 12 3 19a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1l-2-7"></path><path d="M5 12 7 5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1l2 7"></path></svg>
       Unibox
+      <span class="nav-badge" data-unread-badge hidden></span>
     </button>
   </nav>
 
@@ -283,9 +375,9 @@
   <main class="main">
     <div class="top-bar">
       <div class="sync-status"><span class="live-dot" id="liveDot"></span><span id="syncedText">Syncing…</span></div>
-      <button class="icon-btn clay-btn" id="settingsBtn" type="button" aria-label="Data source settings" title="Data source settings">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      </button>
+      <a class="icon-btn clay-btn" id="alertsBtn" target="_blank" rel="noopener" hidden aria-label="Get reply alerts" title="Get a notification for every reply">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+      </a>
       <button class="icon-btn clay-btn" id="refreshBtn" type="button" aria-label="Refresh data" title="Refresh now">
         <svg id="refreshIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 4v5h-5"></path></svg>
       </button>
@@ -315,8 +407,7 @@
         <button class="banner-btn" id="retryBtn" type="button">Try again</button>
       </div>
       <div class="banner info" id="demoBanner" hidden>
-        <span>You're viewing demo data. Connect your “CRM Data” sheet to see live numbers.</span>
-        <button class="banner-btn" data-open-settings type="button">Connect sheet</button>
+        <span>Example data. Open the Desktop dashboard link from your sheet (Outreach → Show links) to see your numbers.</span>
       </div>
 
       <div class="kpi-grid">
@@ -394,56 +485,69 @@
       </div>
     </section>
 
-    <!-- UNIBOX VIEW (next phase) -->
+    <!-- UNIBOX VIEW -->
     <section id="viewUnibox" hidden>
       <h1>Unibox</h1>
-      <div class="clay placeholder">
-        <div class="kpi-icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 3h6l2-3h4"></path><path d="M5 12 3 19a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1l-2-7"></path><path d="M5 12 7 5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1l2 7"></path></svg></div>
-        <h2>Unibox is coming next</h2>
-        <p>Every reply from every sending inbox in one place, filterable by Interested, Uninterested, Out of office and more.</p>
+
+      <div class="controls-row" id="uControls">
+        <div class="pill-group" id="uFilters" role="group" aria-label="Filter conversations">
+          <button class="pill" data-ufilter="all" type="button">All<span class="count" data-ucount="all"></span></button>
+          <button class="pill" data-ufilter="interested" type="button">Interested<span class="count" data-ucount="interested"></span></button>
+          <button class="pill" data-ufilter="uninterested" type="button">Not interested<span class="count" data-ucount="uninterested"></span></button>
+          <button class="pill" data-ufilter="other" type="button">Other<span class="count" data-ucount="other"></span></button>
+          <button class="pill" data-ufilter="unread" type="button">Unread<span class="count" data-ucount="unread"></span></button>
+        </div>
+        <div class="u-tools">
+          <select class="u-select" id="uMailbox" aria-label="Sending inbox"><option value="">All inboxes</option></select>
+        </div>
+      </div>
+
+      <div class="banner info" id="uSampleBanner" hidden>
+        <span>This is an example inbox, not your real conversations.</span>
+        <button class="banner-btn" id="uExitSample" type="button">Close example</button>
+      </div>
+
+      <div class="clay u-setup" id="uSetup" hidden>
+        <h2>Your conversations will appear here</h2>
+        <p>Every reply to your outreach emails, from all of your sending inboxes, shows up here automatically once your inboxes are connected.</p>
+        <button class="btn btn-primary" id="uTrySample" type="button">See an example</button>
+      </div>
+
+      <div class="clay u-shell" id="uShell" hidden>
+        <div class="u-list">
+          <div class="u-search">
+            <input id="uSearch" type="search" placeholder="Search name, company, email…" autocomplete="off">
+            <button class="u-link" id="uMarkAll" type="button">Mark all read</button>
+          </div>
+          <div class="u-items" id="uItems"></div>
+        </div>
+        <div class="u-view">
+          <div class="u-placeholder" id="uPlaceholder">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Select a conversation to read it here.
+          </div>
+          <div class="u-conv" id="uConv" hidden>
+            <div class="u-conv-head">
+              <button class="u-back" id="uBack" type="button" aria-label="Back to conversations">‹</button>
+              <div class="avatar" id="uAvatar"></div>
+              <div class="u-conv-who">
+                <div class="u-conv-name" id="uName"></div>
+                <div class="u-conv-sub" id="uSub"></div>
+              </div>
+              <select class="u-status" id="uStatus" aria-label="Label"></select>
+            </div>
+            <div class="u-subject" id="uSubject"></div>
+            <div class="u-msgs" id="uMsgs"></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 </div>
 
-<!-- Settings -->
-<dialog id="settings">
-  <form class="dlg" id="settingsForm">
-    <h2>Data source</h2>
-    <div class="field">
-      <label for="sSheet">Spreadsheet link or ID</label>
-      <input id="sSheet" placeholder="https://docs.google.com/spreadsheets/d/…" autocomplete="off" spellcheck="false">
-    </div>
-    <div class="field">
-      <label for="sKey">API key</label>
-      <input id="sKey" type="password" placeholder="AIza…" autocomplete="off" spellcheck="false">
-    </div>
-    <div class="row2">
-      <div class="field">
-        <label for="sTab">Sheet (tab) name</label>
-        <input id="sTab" autocomplete="off">
-      </div>
-      <div class="field">
-        <label for="sRefresh">Auto-refresh</label>
-        <select id="sRefresh">
-          <option value="30">Every 30 seconds</option>
-          <option value="60">Every minute</option>
-          <option value="120">Every 2 minutes</option>
-          <option value="300">Every 5 minutes</option>
-        </select>
-      </div>
-    </div>
-    <label class="check"><input type="checkbox" id="sAuto"> Count “Out of office” and “Automatic reply” as replies</label>
-    <p class="hint">The sheet must be shared as “Anyone with the link → Viewer”. Changes here are saved in this browser only.</p>
-    <p class="dlg-err" id="dlgErr" hidden></p>
-    <div class="dlg-actions">
-      <button type="button" class="btn clay-btn" id="resetSettings">Reset to default</button>
-      <button type="button" class="btn clay-btn" id="cancelSettings">Cancel</button>
-      <button type="submit" class="btn btn-primary" id="saveSettings">Test &amp; save</button>
-    </div>
-  </form>
-</dialog>
+<div class="toast" id="toast" role="status" hidden></div>
 
+<script src="unibox-core.js?v=4"></script>
 <script>
 (() => {
   'use strict';
@@ -453,9 +557,11 @@
     sheetId: '1_SjE3zZpUMjR_gpq1nrUG7kYV3e6XZgumTthsWo6Efc',
     apiKey: 'AIzaSyDhfdULsGy8l6D0mAIvXPCMb89a5UxxHnM',
     sheetName: 'CRM Data',
-    refresh: 60,      // seconds
+    refresh: 90,      // seconds
     countAuto: true   // count Out of office / Automatic reply as replies
   };
+  // Normally the dashboard connects through the Outreach Hub from the Desktop dashboard link (#c=...).
+  // sheetId/apiKey above are only a fallback for your own local copy; build-github-pages.ps1 removes them.
 
   // Sheet layout (columns A..U)
   const COL = { business: 0, email: 2, status: 16, date: 17 };
@@ -477,6 +583,7 @@
     all: { label: 'All time', days: null }
   };
   const DAY = 864e5;
+  const U = window.UniboxCore; // shared Unibox logic (unibox-core.js)
 
   /* ============== STATE ============== */
   const store = {
@@ -484,7 +591,8 @@
     set(k, v) { try { localStorage.setItem('emd.' + k, JSON.stringify(v)); } catch { /* storage unavailable */ } },
     del(k) { try { localStorage.removeItem('emd.' + k); } catch { /* storage unavailable */ } }
   };
-  let cfg = Object.assign({}, DEFAULT_CFG, store.get('config', {}));
+  const cfg = Object.assign({}, DEFAULT_CFG);
+  const conn = U.connection(); // saved from the Desktop dashboard link
   const pick = (v, table, d) => (table[v] ? v : d);
   const state = {
     period: pick(store.get('period', '7d'), PERIODS, '7d'),
@@ -538,13 +646,7 @@
     return out;
   }
 
-  /* ============== SHEETS FETCH ============== */
-  function extractId(input) {
-    const s = String(input || '').trim();
-    const m = s.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
-    return m ? m[1] : s;
-  }
-
+  /* ============== SHEETS FETCH (local fallback) ============== */
   function friendlyError(status, msg, c) {
     msg = msg || '';
     if (status === 400 && /parse range/i.test(msg)) return `Couldn't find a tab named “${c.sheetName}”.`;
@@ -576,20 +678,32 @@
     if (state.loading) return;
     setLoading(true);
     try {
-      if (isConfigured()) {
-        state.records = toRecords(await fetchSheet(cfg));
+      if (conn) {
+        const d = await U.hubData(conn);
+        state.records = toRecords(d.crm);
+        state.source = 'hub';
+        updateUnibox(d.crm, d.messages);
+      } else if (isConfigured()) {
+        const [values, msgValues] = await Promise.all([
+          fetchSheet(cfg),
+          U.fetchMessages(cfg).catch(() => undefined) // Unibox problems never block the analytics
+        ]);
+        state.records = toRecords(values);
         state.source = 'sheet';
+        updateUnibox(values, msgValues);
       } else {
         state.records = toRecords(demoRows());
         state.source = 'demo';
+        updateUnibox([], null);
       }
       state.error = null;
       state.lastSynced = new Date();
     } catch (e) {
-      state.error = e.message; // keep last good data on screen
+      state.error = e.offline ? 'No internet connection.' : e.message; // keep last good data on screen
     } finally {
       setLoading(false);
       render();
+      renderUnibox();
     }
   }
 
@@ -871,56 +985,11 @@
     return rows;
   }
 
-  /* ============== SETTINGS ============== */
-  const dlg = $('settings');
-  function openSettings() {
-    $('sSheet').value = cfg.sheetId;
-    $('sKey').value = cfg.apiKey;
-    $('sTab').value = cfg.sheetName;
-    $('sRefresh').value = String(cfg.refresh);
-    $('sAuto').checked = cfg.countAuto;
-    $('dlgErr').hidden = true;
-    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  /* ============== REPLY ALERTS ============== */
+  if (U.alertsUrl(conn)) {
+    $('alertsBtn').href = U.alertsUrl(conn);
+    $('alertsBtn').hidden = false;
   }
-  const closeSettings = () => (dlg.close ? dlg.close() : dlg.removeAttribute('open'));
-
-  $('settingsForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const next = {
-      sheetId: extractId($('sSheet').value),
-      apiKey: $('sKey').value.trim(),
-      sheetName: $('sTab').value.trim() || 'CRM Data',
-      refresh: parseInt($('sRefresh').value, 10) || 60,
-      countAuto: $('sAuto').checked
-    };
-    const err = $('dlgErr');
-    if (!next.sheetId || !next.apiKey) { err.textContent = 'Please enter both the spreadsheet link and the API key.'; err.hidden = false; return; }
-    const btn = $('saveSettings');
-    btn.disabled = true; btn.textContent = 'Testing…';
-    try {
-      const values = await fetchSheet(next);
-      cfg = next; store.set('config', cfg);
-      state.records = toRecords(values);
-      state.source = 'sheet'; state.error = null; state.lastSynced = new Date();
-      closeSettings();
-      render();
-      schedule();
-    } catch (ex) {
-      err.textContent = ex.message; err.hidden = false;
-    } finally {
-      btn.disabled = false; btn.textContent = 'Test & save';
-    }
-  });
-  $('resetSettings').addEventListener('click', () => {
-    store.del('config');
-    cfg = Object.assign({}, DEFAULT_CFG);
-    closeSettings();
-    schedule();
-    load();
-  });
-  $('cancelSettings').addEventListener('click', closeSettings);
-  $('settingsBtn').addEventListener('click', openSettings);
-  document.querySelectorAll('[data-open-settings]').forEach((b) => b.addEventListener('click', openSettings));
 
   /* ============== EVENTS ============== */
   $('periodPills').addEventListener('click', (e) => {
@@ -946,8 +1015,194 @@
     $('viewUnibox').hidden = view !== 'unibox';
     document.querySelectorAll('[data-view]').forEach((x) => x.classList.toggle('active', x.dataset.view === view));
     if (view === 'analytics' && chart) chart.resize();
+    if (view === 'unibox') renderUnibox();
   }
   document.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => switchView(b.dataset.view)));
+
+  /* ============== UNIBOX ============== */
+  const ub = {
+    threads: [],
+    available: null,   // null = not loaded yet, false = no "Thread Messages" tab, true = live
+    sample: false,
+    filter: 'all',
+    mailbox: '',
+    q: '',
+    activeId: null,
+    known: null        // received message ids seen in the previous refresh
+  };
+  const activeThread = () => ub.threads.find((t) => t.id === ub.activeId) || null;
+
+  function updateUnibox(crmValues, msgValues) {
+    if (msgValues === undefined) return; // fetch failed: keep what we have
+    if (msgValues === null) { ub.available = false; if (!ub.sample) ub.threads = []; return; }
+    const threads = U.buildThreads(msgValues, U.leadIndex(crmValues));
+    if (ub.known && !ub.sample) {
+      const fresh = U.newReplies(threads, ub.known);
+      if (fresh.length) {
+        const t = fresh[fresh.length - 1].thread;
+        toast(fresh.length === 1 ? `New reply from ${U.displayName(t)}` : `${fresh.length} new replies`, false, () => openThread(t.id));
+      }
+    }
+    ub.known = U.receivedIds(threads);
+    U.ensureBaseline();
+    ub.available = true;
+    ub.sample = false;
+    ub.threads = threads;
+  }
+
+  function setBadges() {
+    const n = ub.available || ub.sample ? U.counts(ub.threads).unread : 0;
+    document.querySelectorAll('[data-unread-badge]').forEach((b) => { b.hidden = !n; b.textContent = n > 99 ? '99+' : String(n); });
+  }
+
+  function renderUnibox() {
+    setBadges();
+    if ($('viewUnibox').hidden) return;
+    const live = ub.sample || ub.available;
+    $('uSetup').hidden = live || ub.available === null;
+    $('uShell').hidden = !live;
+    $('uControls').hidden = !live;
+    $('uSampleBanner').hidden = !ub.sample;
+    if (!live) return;
+
+    const c = U.counts(ub.threads, ub.mailbox);
+    document.querySelectorAll('[data-ucount]').forEach((el) => { el.textContent = c[el.dataset.ucount] ? ` ${c[el.dataset.ucount]}` : ''; });
+    document.querySelectorAll('[data-ufilter]').forEach((b) => b.classList.toggle('active', b.dataset.ufilter === ub.filter));
+
+    const sel = $('uMailbox');
+    const boxes = U.mailboxes(ub.threads);
+    const want = ['', ...boxes].join('|');
+    if (sel.dataset.opts !== want) {
+      sel.innerHTML = '<option value="">All inboxes</option>' + boxes.map((m) => `<option value="${U.esc(m)}">${U.esc(m)}</option>`).join('');
+      sel.dataset.opts = want;
+    }
+    if (ub.mailbox && !boxes.includes(ub.mailbox)) ub.mailbox = '';
+    sel.value = ub.mailbox;
+
+    const list = U.filterThreads(ub.threads, { filter: ub.filter, mailbox: ub.mailbox, q: ub.q });
+    $('uItems').innerHTML = list.length ? list.map((t) => {
+      const meta = U.statusMeta(t.status);
+      const unread = U.isUnread(t);
+      const name = U.displayName(t);
+      return `<button type="button" class="u-item${unread ? ' unread' : ''}${t.id === ub.activeId ? ' active' : ''}" data-thread="${U.esc(t.id)}">
+        <span class="avatar" style="background:${U.avatarColor(name)}">${U.esc(U.initials(name))}${unread ? '<span class="udot"></span>' : ''}</span>
+        <span class="u-item-main">
+          <span class="u-item-top"><span class="u-item-name">${U.esc(name)}</span><span class="u-item-time">${U.timeAgo(t.lastDate)}</span></span>
+          <span class="u-item-biz">${U.esc(t.lead.business || t.lead.email)}</span>
+          <span class="u-item-snip">${t.lastFromMe ? 'You: ' : ''}${U.esc(t.snippet)}</span>
+          <span class="u-item-meta"><span class="chip ${meta.cls}"><span class="chip-dot"></span>${meta.label}</span><span class="u-item-box">${U.esc(t.mailbox)}</span></span>
+        </span>
+      </button>`;
+    }).join('') : `<div class="u-empty">${ub.threads.length ? 'No conversations match this filter.' : 'No replies yet. New replies appear here within about 5 minutes.'}</div>`;
+
+    renderConversation();
+  }
+
+  function renderConversation() {
+    const t = activeThread();
+    $('uPlaceholder').hidden = !!t;
+    $('uConv').hidden = !t;
+    $('uShell').classList.toggle('show-conv', !!t);
+    if (!t) return;
+    const name = U.displayName(t);
+    $('uAvatar').style.background = U.avatarColor(name);
+    $('uAvatar').textContent = U.initials(name);
+    $('uName').textContent = name;
+    $('uSub').textContent = [t.lead.title, t.lead.business, t.lead.email].filter(Boolean).join(' · ') + (t.mailbox ? `  ·  via ${t.mailbox}` : '');
+    $('uSubject').textContent = t.subject;
+
+    const meta = U.statusMeta(t.status);
+    const sel = $('uStatus');
+    const known = U.STATUS_OPTIONS.some((s) => s.toLowerCase() === t.status.toLowerCase());
+    sel.innerHTML = (known ? '' : `<option value="">${U.esc(meta.label)}${t.status ? ' (' + U.esc(t.status) + ')' : ''}</option>`) +
+      U.STATUS_OPTIONS.map((s) => `<option value="${s}">${U.statusMeta(s).label}</option>`).join('');
+    sel.value = known ? U.STATUS_OPTIONS.find((s) => s.toLowerCase() === t.status.toLowerCase()) : '';
+    sel.className = 'u-status chip ' + meta.cls;
+    const canEdit = ub.sample || !!conn;
+    sel.disabled = !canEdit;
+    sel.title = canEdit ? 'Change label' : 'Open the Desktop dashboard link from your sheet to change labels';
+
+    const box = $('uMsgs');
+    const prevId = box.dataset.thread;
+    box.innerHTML = t.messages.map((m) => {
+      const sent = m.direction === 'Sent';
+      const who = sent ? 'You' : (U.parseFrom(m.from).name || name);
+      return `<div class="msg ${sent ? 'msg-sent' : 'msg-received'}"><div class="msg-meta">${U.esc(who)} · ${U.esc(U.fmtFull(m.date))}</div>${U.esc(m.body || '(no text)')}</div>`;
+    }).join('');
+    if (prevId !== t.id) { box.scrollTop = box.scrollHeight; box.dataset.thread = t.id; }
+  }
+
+  function openThread(id) {
+    switchView('unibox');
+    ub.activeId = id;
+    const t = activeThread();
+    if (t) U.markRead(t);
+    renderUnibox();
+  }
+
+  let toastTimer = null;
+  function toast(text, isError, onClick) {
+    const el = $('toast');
+    el.textContent = text;
+    el.className = 'toast' + (isError ? ' error' : '');
+    el.hidden = false;
+    el.onclick = () => { el.hidden = true; if (onClick) onClick(); };
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { el.hidden = true; }, 6000);
+  }
+
+  $('uFilters').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ufilter]');
+    if (!b) return;
+    ub.filter = b.dataset.ufilter;
+    renderUnibox();
+  });
+  $('uMailbox').addEventListener('change', (e) => { ub.mailbox = e.target.value; renderUnibox(); });
+  $('uSearch').addEventListener('input', (e) => { ub.q = e.target.value; renderUnibox(); });
+  $('uItems').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-thread]');
+    if (b) openThread(b.dataset.thread);
+  });
+  $('uBack').addEventListener('click', () => { ub.activeId = null; renderUnibox(); });
+  $('uMarkAll').addEventListener('click', () => { U.markAllRead(ub.threads); renderUnibox(); });
+  $('uTrySample').addEventListener('click', () => {
+    const s = U.sampleData();
+    ub.sample = true;
+    ub.threads = U.buildThreads(s.msgs, U.leadIndex(s.crm));
+    ub.activeId = null;
+    renderUnibox();
+  });
+  $('uExitSample').addEventListener('click', () => {
+    ub.sample = false;
+    ub.threads = [];
+    ub.activeId = null;
+    load();
+  });
+  $('uStatus').addEventListener('change', async (e) => {
+    const t = activeThread();
+    if (!t || !e.target.value) return;
+    const prev = t.status;
+    t.status = e.target.value;
+    renderUnibox();
+    if (ub.sample) return;
+    try {
+      t.status = await U.setStatus(conn, t.id, e.target.value);
+      toast(`Labeled ${U.displayName(t)} as ${U.statusMeta(t.status).label}`);
+      load(); // refresh analytics with the new label
+    } catch (err) {
+      t.status = prev;
+      renderUnibox();
+      toast(err.message, true);
+    }
+  });
+
+  // Links like #thread=<id> (from phone notifications) open that conversation.
+  function routeFromHash() {
+    const id = U.threadFromHash();
+    if (id) { ub.activeId = id; switchView('unibox'); }
+    else if (/[#&]unibox\b/.test(location.hash)) switchView('unibox');
+  }
+  window.addEventListener('hashchange', routeFromHash);
 
   let timer = null;
   function schedule() {
@@ -963,6 +1218,7 @@
 
   /* ============== INIT ============== */
   setDisplay('chart');
+  routeFromHash();
   load();
   schedule();
 })();

@@ -1,8 +1,9 @@
 // Offline support: cache the app shell and libraries; sheet data is cached by the page itself.
-const CACHE = 'outreach-v1';
+const CACHE = 'outreach-v4';
 const SHELL = [
   './',
   './index.html',
+  '../unibox-core.js?v=4',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',
@@ -46,9 +47,17 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Everything else (shell files, Chart.js, fonts): stale-while-revalidate.
-  const cacheable = url.origin === self.location.origin
-    || url.hostname === 'cdnjs.cloudflare.com'
+  // The app's own files: network first, so a page and its scripts always come from the same version.
+  if (url.origin === self.location.origin) {
+    event.respondWith(fetch(req).then((res) => {
+      if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+      return res;
+    }).catch(() => caches.match(req)));
+    return;
+  }
+
+  // Libraries and fonts (versioned, rarely change): stale-while-revalidate.
+  const cacheable = url.hostname === 'cdnjs.cloudflare.com'
     || url.hostname === 'fonts.googleapis.com'
     || url.hostname === 'fonts.gstatic.com';
   if (!cacheable) return;

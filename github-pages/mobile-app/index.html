@@ -217,6 +217,91 @@
   .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;padding:7px 4px;border-radius:16px;font-size:11px;font-weight:700;color:var(--ink-faint);transition:color .15s, background .15s;}
   .tab svg{width:22px;height:22px;}
   .tab.active{color:var(--blue-deep);background:rgba(61,111,224,.1);}
+  .tab{position:relative;}
+  .tab-badge{position:absolute;top:2px;left:calc(50% + 6px);min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--red);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+
+  /* ---------- Unibox ---------- */
+  .chip-teal{background:rgba(31,182,201,.15);color:#128FA0;}
+  .chip-amber{background:rgba(227,160,8,.16);color:#9a6a00;}
+  .chip-blue{background:rgba(61,111,224,.13);color:#2A52B8;}
+  .search{
+    width:100%;border:none;padding:12px 14px;border-radius:16px;font-size:16px;font-weight:500;
+    background:var(--surface);box-shadow:inset 3px 3px 7px var(--shadow-d), inset -3px -3px 7px var(--shadow-l);
+    -webkit-appearance:none;appearance:none;
+  }
+  .chip-row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:12px 2px 6px;margin:0 -2px;}
+  .chip-row::-webkit-scrollbar{display:none;}
+  .fchip{
+    flex-shrink:0;border:none;padding:8px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--ink-soft);
+    background:linear-gradient(150deg,var(--surface-2),var(--surface));box-shadow:3px 3px 8px var(--shadow-d), -3px -3px 8px var(--shadow-l);
+  }
+  .fchip .count{opacity:.7;margin-left:3px;font-variant-numeric:tabular-nums;}
+  .fchip.active{color:#fff;background:linear-gradient(150deg,var(--blue),var(--blue-deep));box-shadow:2px 3px 8px rgba(42,82,184,.35);}
+  .fchip.active[data-ufilter="interested"]{background:linear-gradient(150deg,#2fc584,#1c8f5c);}
+  .fchip.active[data-ufilter="uninterested"]{background:linear-gradient(150deg,#f26d6d,#c8433f);}
+  .u-bar{display:flex;align-items:center;gap:10px;margin-top:6px;}
+  .u-bar select{
+    flex:1;min-width:0;border:none;padding:10px 12px;border-radius:14px;font-size:14px;font-weight:600;color:var(--ink-soft);
+    background:var(--surface);box-shadow:inset 2px 2px 5px var(--shadow-d), inset -2px -2px 5px var(--shadow-l);
+  }
+  .u-link{border:none;background:none;font-size:12px;font-weight:700;color:var(--blue-deep);white-space:nowrap;padding:6px 2px;}
+  .u-list{margin-top:12px;padding:6px;}
+  .u-item{display:flex;gap:11px;padding:12px 10px;border-radius:18px;border:none;background:none;width:100%;text-align:left;}
+  .u-item + .u-item{border-top:1px solid rgba(61,111,224,.07);border-radius:0 0 18px 18px;}
+  .u-item:active{background:rgba(61,111,224,.08);}
+  .avatar{width:42px;height:42px;border-radius:14px;flex-shrink:0;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;position:relative;}
+  .avatar .udot{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid #fff;}
+  .u-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;}
+  .u-top{display:flex;align-items:baseline;gap:8px;}
+  .u-name{flex:1;min-width:0;font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-item.unread .u-name{font-weight:800;}
+  .u-time{font-size:11px;color:var(--ink-faint);flex-shrink:0;}
+  .u-item.unread .u-time{color:var(--blue-deep);font-weight:800;}
+  .u-biz,.u-snip,.u-box{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-biz{font-size:12px;color:var(--ink-soft);}
+  .u-snip{font-size:12.5px;color:var(--ink-faint);}
+  .u-item.unread .u-snip{color:var(--ink-soft);}
+  .u-meta{display:flex;align-items:center;gap:6px;min-width:0;margin-top:2px;}
+  .u-box{font-size:10.5px;color:var(--ink-faint);}
+  .u-empty{padding:30px 14px;text-align:center;font-size:13px;color:var(--ink-faint);}
+  .u-setup{padding:20px;display:flex;flex-direction:column;gap:10px;}
+  .u-setup h2{font-family:var(--font-display);font-weight:600;font-size:19px;}
+  .u-setup p,.u-setup li{font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  .u-setup ol{padding-left:18px;}
+  .sample-banner{display:flex;align-items:center;gap:10px;padding:11px 14px;margin-top:12px;border-radius:16px;font-size:12px;font-weight:600;color:var(--ink-soft);background:linear-gradient(150deg,#fff,#e6efff);box-shadow:4px 4px 10px var(--shadow-d);}
+  .sample-banner span{flex:1;}
+  .sample-banner button{border:none;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;background:linear-gradient(150deg,var(--blue),var(--blue-deep));}
+
+  .conv-head{display:flex;align-items:center;gap:11px;padding:4px 2px 12px;}
+  .back{width:38px;height:38px;border-radius:13px;border:none;flex-shrink:0;color:var(--blue-deep);display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,var(--surface-2),var(--surface));box-shadow:3px 3px 8px var(--shadow-d), -3px -3px 8px var(--shadow-l);}
+  .back svg{width:20px;height:20px;}
+  .conv-who{flex:1;min-width:0;}
+  .conv-name{font-weight:800;font-size:15.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .conv-sub{font-size:11.5px;color:var(--ink-soft);margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .conv-card{padding:14px;}
+  .conv-row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .conv-subject{font-size:12.5px;font-weight:700;color:var(--ink-soft);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .u-status{
+    border:none;border-radius:999px;padding:8px 28px 8px 12px;font-size:12.5px;font-weight:800;flex-shrink:0;max-width:60%;
+    -webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 10px center;
+  }
+  .u-status:disabled{opacity:.75;}
+  .conv-via{font-size:11px;color:var(--ink-faint);margin-top:8px;}
+  .msgs{display:flex;flex-direction:column;gap:12px;margin-top:14px;}
+  .msg{max-width:88%;padding:11px 14px;border-radius:18px;font-size:14px;line-height:1.55;white-space:pre-wrap;word-break:break-word;}
+  .msg-sent{align-self:flex-end;background:linear-gradient(150deg,var(--blue),var(--blue-deep));color:#fff;border-bottom-right-radius:5px;}
+  .msg-received{align-self:flex-start;background:var(--surface-2);color:var(--ink);box-shadow:3px 3px 8px var(--shadow-d);border-bottom-left-radius:5px;}
+  .msg-meta{font-size:10.5px;opacity:.75;margin-bottom:4px;font-weight:700;white-space:normal;}
+
+  .toast{
+    position:fixed;z-index:60;left:50%;transform:translateX(-50%);bottom:calc(96px + var(--safe-b));
+    width:min(440px,calc(100% - 32px));padding:12px 16px;border-radius:16px;font-size:13px;font-weight:600;color:#fff;background:#152447;
+    box-shadow:0 12px 30px rgba(21,36,71,.35);animation:toastIn .25s ease;
+  }
+  .toast.error{background:#c8433f;}
+  @keyframes toastIn{from{opacity:0;transform:translate(-50%,10px);}to{opacity:1;transform:translate(-50%,0);}}
 </style>
 </head>
 <body>
@@ -337,58 +422,79 @@
 
   <!-- UNIBOX -->
   <main class="screen" id="screen-unibox" hidden>
-    <div class="clay placeholder">
+    <div class="clay u-setup" id="uSetup" hidden>
       <div class="kpi-icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 3h6l2-3h4"></path><path d="M5 12 3 19a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1l-2-7"></path><path d="M5 12 7 5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1l2 7"></path></svg></div>
-      <h2>Unibox is coming next</h2>
-      <p>Every reply from every sending inbox in one place, filterable by Interested, Uninterested, Out of office and more.</p>
+      <h2>Your conversations will appear here</h2>
+      <p>Every reply to your outreach emails, from all of your sending inboxes, shows up here automatically once your inboxes are connected.</p>
+      <button class="btn btn-primary press" id="uTrySample" type="button">See an example</button>
+    </div>
+
+    <div id="uLive" hidden>
+      <input class="search" id="uSearch" type="search" placeholder="Search name, company, email…" autocomplete="off">
+      <div class="chip-row" id="uFilters" role="group" aria-label="Filter conversations">
+        <button class="fchip" data-ufilter="all" type="button">All<span class="count" data-ucount="all"></span></button>
+        <button class="fchip" data-ufilter="interested" type="button">Interested<span class="count" data-ucount="interested"></span></button>
+        <button class="fchip" data-ufilter="uninterested" type="button">Not interested<span class="count" data-ucount="uninterested"></span></button>
+        <button class="fchip" data-ufilter="other" type="button">Other<span class="count" data-ucount="other"></span></button>
+        <button class="fchip" data-ufilter="unread" type="button">Unread<span class="count" data-ucount="unread"></span></button>
+      </div>
+      <div class="u-bar">
+        <select id="uMailbox" aria-label="Sending inbox"><option value="">All inboxes</option></select>
+        <button class="u-link" id="uMarkAll" type="button">Mark all read</button>
+      </div>
+      <div class="sample-banner" id="uSampleBanner" hidden>
+        <span>This is an example inbox, not your real conversations.</span>
+        <button id="uExitSample" type="button">Close</button>
+      </div>
+      <div class="clay u-list" id="uItems"></div>
     </div>
   </main>
 
-  <!-- SETTINGS -->
+  <!-- CONVERSATION -->
+  <main class="screen" id="screen-thread" hidden>
+    <div class="conv-head">
+      <button class="back press" id="uBack" type="button" aria-label="Back to Unibox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+      </button>
+      <div class="avatar" id="uAvatar"></div>
+      <div class="conv-who">
+        <div class="conv-name" id="uName"></div>
+        <div class="conv-sub" id="uSub"></div>
+      </div>
+    </div>
+    <div class="clay conv-card">
+      <div class="conv-row">
+        <div class="conv-subject" id="uSubject"></div>
+        <select class="u-status" id="uStatus" aria-label="Label"></select>
+      </div>
+      <div class="conv-via" id="uVia"></div>
+    </div>
+    <div class="msgs" id="uMsgs"></div>
+  </main>
+
+  <!-- APP (install, alerts, connection status: nothing to type) -->
   <main class="screen" id="screen-settings" hidden>
-    <div class="clay install-card" id="installCard" hidden>
+    <div class="clay install-card" id="connCard">
+      <div class="kpi-icon i-indigo" id="connIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>
+      <p id="connText"></p>
+    </div>
+
+    <div class="clay install-card" id="installCard" hidden style="margin-top:14px">
       <div class="kpi-icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M12 7v7"></path><path d="m9 11 3 3 3-3"></path></svg></div>
       <p id="installText"><b>Install the app</b><br>Add Outreach to your home screen for a full-screen app.</p>
       <button class="btn btn-primary" id="installBtn" type="button" style="width:auto" hidden>Install</button>
     </div>
 
-    <div class="clay install-card" id="setupCard" hidden>
-      <div class="kpi-icon i-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>
-      <p><b>Connect your sheet</b><br>Enter your spreadsheet link and API key once. They stay on this device only.</p>
+    <div class="clay form-card" id="alertsCard" hidden style="margin-top:14px">
+      <div class="toggle-row" style="justify-content:flex-start">
+        <div class="kpi-icon i-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div>
+        <p style="font-size:12.5px;color:var(--ink-soft);line-height:1.5"><b style="color:var(--ink)">Reply alerts</b><br>Get a notification on this phone every time a lead replies.</p>
+      </div>
+      <a class="btn btn-soft press" href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">1. Get the free ntfy app</a>
+      <a class="btn btn-primary press" id="alertsLink" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">2. Turn on reply alerts</a>
+      <p class="hint">In ntfy, tap Subscribe when it asks. That's all.</p>
     </div>
 
-    <div class="section-label">Data source</div>
-    <form class="clay form-card" id="settingsForm">
-      <div class="field">
-        <label for="sSheet">Spreadsheet link or ID</label>
-        <input id="sSheet" autocomplete="off" spellcheck="false" placeholder="https://docs.google.com/spreadsheets/d/…">
-      </div>
-      <div class="field">
-        <label for="sKey">API key</label>
-        <input id="sKey" type="password" autocomplete="off" spellcheck="false" placeholder="AIza…">
-      </div>
-      <div class="field">
-        <label for="sTab">Sheet (tab) name</label>
-        <input id="sTab" autocomplete="off">
-      </div>
-      <div class="field">
-        <label for="sRefresh">Auto-refresh</label>
-        <select id="sRefresh">
-          <option value="30">Every 30 seconds</option>
-          <option value="60">Every minute</option>
-          <option value="120">Every 2 minutes</option>
-          <option value="300">Every 5 minutes</option>
-        </select>
-      </div>
-      <div class="toggle-row">
-        <span>Count Out of office &amp; Automatic reply as replies</span>
-        <label class="switch"><input type="checkbox" id="sAuto"><span></span></label>
-      </div>
-      <p class="form-err" id="formErr" hidden></p>
-      <button class="btn btn-primary press" id="saveBtn" type="submit">Test &amp; save</button>
-      <button class="btn btn-soft press" id="resetBtn" type="button">Reset to default</button>
-      <p class="hint">The sheet must be shared as “Anyone with the link → Viewer”. Settings are saved on this device only.</p>
-    </form>
     <p class="hint" id="aboutText" style="margin:14px 6px 0;"></p>
   </main>
 
@@ -400,14 +506,17 @@
     <button class="tab" type="button" data-screen="unibox">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 3h6l2-3h4"></path><path d="M5 12 3 19a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1l-2-7"></path><path d="M5 12 7 5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1l2 7"></path></svg>
       Unibox
+      <span class="tab-badge" id="tabBadge" hidden></span>
     </button>
     <button class="tab" type="button" data-screen="settings">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      Settings
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg>
+      App
     </button>
   </nav>
+  <div class="toast" id="toast" role="status" hidden></div>
 </div>
 
+<script src="../unibox-core.js?v=4"></script>
 <script>
 (() => {
   'use strict';
@@ -417,9 +526,11 @@
     sheetId: '',
     apiKey: '',
     sheetName: 'CRM Data',
-    refresh: 60,      // seconds
+    refresh: 90,      // seconds
     countAuto: true   // count Out of office / Automatic reply as replies
   };
+  // Normally the app connects through the Outreach Hub from the Phone app link (#c=...).
+  // sheetId/apiKey above are only a fallback for your own local copy; build-github-pages.ps1 removes them.
 
   // Sheet layout (columns A..U)
   const COL = { business: 0, email: 2, status: 16, date: 17 };
@@ -440,8 +551,9 @@
     '90d': { label: 'Last 90 days', days: 90, prev: 'previous 90 days' },
     all: { label: 'All time', days: null }
   };
-  const SCREENS = { analytics: 'Analytics', unibox: 'Unibox', settings: 'Settings' };
+  const SCREENS = { analytics: 'Analytics', unibox: 'Unibox', thread: 'Unibox', settings: 'App' };
   const DAY = 864e5;
+  const U = window.UniboxCore; // shared Unibox logic (../unibox-core.js)
   const ROWS_PREVIEW = 7;
 
   /* ============== STATE ============== */
@@ -450,7 +562,8 @@
     set(k, v) { try { localStorage.setItem('emd.' + k, JSON.stringify(v)); } catch { /* storage unavailable or full */ } },
     del(k) { try { localStorage.removeItem('emd.' + k); } catch { /* storage unavailable */ } }
   };
-  let cfg = Object.assign({}, DEFAULT_CFG, store.get('config', {}));
+  const cfg = Object.assign({}, DEFAULT_CFG);
+  const conn = U.connection(); // saved from the Phone app link
   const pick = (v, table, d) => (table[v] ? v : d);
   const state = {
     screen: 'analytics',
@@ -517,13 +630,7 @@
     return true;
   }
 
-  /* ============== SHEETS FETCH ============== */
-  function extractId(input) {
-    const s = String(input || '').trim();
-    const m = s.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
-    return m ? m[1] : s;
-  }
-
+  /* ============== SHEETS FETCH (local fallback) ============== */
   function friendlyError(status, msg, c) {
     msg = msg || '';
     if (status === 400 && /parse range/i.test(msg)) return `Couldn't find a tab named “${c.sheetName}”.`;
@@ -551,23 +658,36 @@
     $('refreshIcon').classList.toggle('spin', on);
   }
 
-  const isConfigured = () => !!(cfg.sheetId && cfg.apiKey);
+  const isConfigured = () => !!(conn || (cfg.sheetId && cfg.apiKey));
 
   async function load() {
     if (state.loading) return;
-    if (!isConfigured()) { render(); return; }
+    if (!isConfigured()) { ub.available = false; render(); renderUnibox(); return; }
     setLoading(true);
     try {
-      state.records = toRecords(await fetchSheet(cfg));
+      let values, msgValues;
+      if (conn) {
+        const d = await U.hubData(conn);
+        values = d.crm;
+        msgValues = d.messages;
+      } else {
+        [values, msgValues] = await Promise.all([
+          fetchSheet(cfg),
+          U.fetchMessages(cfg).catch(() => undefined) // Unibox problems never block the analytics
+        ]);
+      }
+      state.records = toRecords(values);
       state.lastSynced = new Date();
       state.fromCache = false;
       state.error = null;
       saveCache();
+      updateUnibox(values, msgValues);
     } catch (e) {
       state.error = e.offline ? 'offline' : e.message; // keep last good data on screen
     } finally {
       setLoading(false);
       render();
+      renderUnibox();
     }
   }
 
@@ -745,9 +865,8 @@
   }
 
   function renderAbout() {
-    $('aboutText').textContent = state.records.length
-      ? `“${cfg.sheetName}” · ${nf.format(state.records.length)} leads · auto-refresh every ${cfg.refresh >= 60 ? cfg.refresh / 60 + ' min' : cfg.refresh + ' s'}`
-      : '';
+    $('aboutText').textContent = state.records.length ? `${nf.format(state.records.length)} leads · refreshes every ${Math.round(cfg.refresh / 60 * 10) / 10} min` : '';
+    if (state.screen === 'settings') fillSettings();
   }
 
   /* ============== CHART ============== */
@@ -847,62 +966,229 @@
   function switchScreen(name) {
     state.screen = name;
     Object.keys(SCREENS).forEach((k) => { $('screen-' + k).hidden = k !== name; });
-    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.screen === name));
+    const tab = name === 'thread' ? 'unibox' : name;
+    document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.screen === tab));
     $('screenTitle').textContent = SCREENS[name];
     window.scrollTo(0, 0);
     if (name === 'settings') fillSettings();
     if (name === 'analytics' && chart) chart.resize();
+    if (name === 'unibox') { ub.activeId = null; renderUnibox(); }
+    if (name === 'thread') renderConversation();
   }
   document.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => switchScreen(t.dataset.screen)));
 
-  /* ============== SETTINGS ============== */
+  /* ============== APP SCREEN (status, install, alerts) ============== */
   function fillSettings() {
-    $('sSheet').value = cfg.sheetId;
-    $('sKey').value = cfg.apiKey;
-    $('sTab').value = cfg.sheetName;
-    $('sRefresh').value = String(cfg.refresh);
-    $('sAuto').checked = cfg.countAuto;
-    $('formErr').hidden = true;
-    $('setupCard').hidden = isConfigured();
-    $('resetBtn').hidden = !DEFAULT_CFG.sheetId;
+    const ok = isConfigured();
+    $('connIcon').className = 'kpi-icon ' + (ok ? 'i-teal' : 'i-orange');
+    $('connText').innerHTML = !ok
+      ? '<b>Not connected</b><br>Open the Phone app link from your sheet (Outreach → Show links) on this phone.'
+      : state.error && state.error !== 'offline'
+        ? `<b>Connection problem</b><br>${U.esc(state.error)}`
+        : `<b>Connected ✓</b><br>${state.lastSynced ? 'Last updated ' + state.lastSynced.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) + '. ' : ''}Updates automatically.`;
+    const alerts = U.alertsUrl(conn);
+    $('alertsCard').hidden = !alerts;
+    if (alerts) $('alertsLink').href = alerts;
   }
 
-  $('settingsForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const next = {
-      sheetId: extractId($('sSheet').value),
-      apiKey: $('sKey').value.trim(),
-      sheetName: $('sTab').value.trim() || 'CRM Data',
-      refresh: parseInt($('sRefresh').value, 10) || 60,
-      countAuto: $('sAuto').checked
-    };
-    const err = $('formErr');
-    if (!next.sheetId || !next.apiKey) { err.textContent = 'Please enter both the spreadsheet link and the API key.'; err.hidden = false; return; }
-    const btn = $('saveBtn');
-    btn.disabled = true; btn.textContent = 'Testing…';
-    try {
-      const values = await fetchSheet(next);
-      cfg = next; store.set('config', cfg);
-      state.records = toRecords(values);
-      state.lastSynced = new Date(); state.fromCache = false; state.error = null;
-      saveCache();
-      schedule();
-      render();
-      switchScreen('analytics');
-    } catch (ex) {
-      err.textContent = ex.offline ? "You're offline — connect to the internet to test the sheet." : ex.message;
-      err.hidden = false;
-    } finally {
-      btn.disabled = false; btn.textContent = 'Test & save';
+  /* ============== UNIBOX ============== */
+  const ub = {
+    threads: [],
+    available: null,   // null = not loaded yet, false = no "Thread Messages" tab, true = live
+    sample: false,
+    filter: 'all',
+    mailbox: '',
+    q: '',
+    activeId: null,
+    known: null        // received message ids seen in the previous refresh
+  };
+  const activeThread = () => ub.threads.find((t) => t.id === ub.activeId) || null;
+
+  function updateUnibox(crmValues, msgValues) {
+    if (msgValues === undefined) return; // fetch failed: keep what we have
+    if (msgValues === null) { ub.available = false; if (!ub.sample) ub.threads = []; return; }
+    const threads = U.buildThreads(msgValues, U.leadIndex(crmValues));
+    if (ub.known && !ub.sample) {
+      const fresh = U.newReplies(threads, ub.known);
+      if (fresh.length) {
+        const t = fresh[fresh.length - 1].thread;
+        toast(fresh.length === 1 ? `New reply from ${U.displayName(t)}` : `${fresh.length} new replies`, false, () => openThread(t.id));
+      }
     }
+    ub.known = U.receivedIds(threads);
+    U.ensureBaseline();
+    ub.available = true;
+    ub.sample = false;
+    ub.threads = threads;
+    saveUniboxCache(crmValues, msgValues);
+    if (ub.pendingId && threads.some((t) => t.id === ub.pendingId)) { const id = ub.pendingId; ub.pendingId = null; openThread(id); }
+  }
+
+  // Keep the conversations (plus the few lead columns they need) on the device for offline use.
+  function saveUniboxCache(crmValues, msgValues) {
+    const ids = new Set(msgValues.map((r) => r && r[1]));
+    const crm = crmValues.filter((r) => r && ids.has(r[19])).map((r) => {
+      const row = new Array(21).fill('');
+      [0, 1, 2, 3, 16, 19, 20].forEach((i) => { row[i] = r[i] || ''; });
+      return row;
+    });
+    store.set('m.ucache', { crm, msgs: msgValues });
+  }
+  function loadUniboxCache() {
+    const c = store.get('m.ucache', null);
+    if (!c || !Array.isArray(c.msgs)) return;
+    ub.threads = U.buildThreads(c.msgs, U.leadIndex(c.crm));
+    ub.known = U.receivedIds(ub.threads);
+    ub.available = true;
+  }
+
+  function renderUnibox() {
+    const n = ub.available || ub.sample ? U.counts(ub.threads).unread : 0;
+    $('tabBadge').hidden = !n;
+    $('tabBadge').textContent = n > 99 ? '99+' : String(n);
+    if (state.screen === 'thread') { renderConversation(); return; }
+    if (state.screen !== 'unibox') return;
+
+    const live = ub.sample || ub.available;
+    $('uSetup').hidden = live || ub.available === null;
+    $('uLive').hidden = !live;
+    $('uSampleBanner').hidden = !ub.sample;
+    if (!live) return;
+
+    const c = U.counts(ub.threads, ub.mailbox);
+    document.querySelectorAll('[data-ucount]').forEach((el) => { el.textContent = c[el.dataset.ucount] ? ` ${c[el.dataset.ucount]}` : ''; });
+    document.querySelectorAll('[data-ufilter]').forEach((b) => b.classList.toggle('active', b.dataset.ufilter === ub.filter));
+
+    const sel = $('uMailbox');
+    const boxes = U.mailboxes(ub.threads);
+    const want = boxes.join('|');
+    if (sel.dataset.opts !== want) {
+      sel.innerHTML = '<option value="">All inboxes</option>' + boxes.map((m) => `<option value="${U.esc(m)}">${U.esc(m)}</option>`).join('');
+      sel.dataset.opts = want;
+    }
+    if (ub.mailbox && !boxes.includes(ub.mailbox)) ub.mailbox = '';
+    sel.value = ub.mailbox;
+
+    const list = U.filterThreads(ub.threads, { filter: ub.filter, mailbox: ub.mailbox, q: ub.q });
+    $('uItems').innerHTML = list.length ? list.map((t) => {
+      const meta = U.statusMeta(t.status);
+      const unread = U.isUnread(t);
+      const name = U.displayName(t);
+      return `<button type="button" class="u-item${unread ? ' unread' : ''}" data-thread="${U.esc(t.id)}">
+        <span class="avatar" style="background:${U.avatarColor(name)}">${U.esc(U.initials(name))}${unread ? '<span class="udot"></span>' : ''}</span>
+        <span class="u-main">
+          <span class="u-top"><span class="u-name">${U.esc(name)}</span><span class="u-time">${U.timeAgo(t.lastDate)}</span></span>
+          <span class="u-biz">${U.esc(t.lead.business || t.lead.email)}</span>
+          <span class="u-snip">${t.lastFromMe ? 'You: ' : ''}${U.esc(t.snippet)}</span>
+          <span class="u-meta"><span class="chip ${meta.cls}"><span class="chip-dot"></span>${meta.label}</span><span class="u-box">${U.esc(t.mailbox)}</span></span>
+        </span>
+      </button>`;
+    }).join('') : `<div class="u-empty">${ub.threads.length ? 'No conversations match this filter.' : 'No replies yet. New replies appear here within about 5 minutes.'}</div>`;
+  }
+
+  function renderConversation() {
+    const t = activeThread();
+    if (!t) { switchScreen('unibox'); return; }
+    const name = U.displayName(t);
+    $('uAvatar').style.background = U.avatarColor(name);
+    $('uAvatar').textContent = U.initials(name);
+    $('uName').textContent = name;
+    $('uSub').textContent = [t.lead.title, t.lead.business].filter(Boolean).join(' · ') || t.lead.email;
+    $('uSubject').textContent = t.subject;
+    $('uVia').textContent = [t.lead.email, t.mailbox ? 'via ' + t.mailbox : ''].filter(Boolean).join('  ·  ');
+
+    const meta = U.statusMeta(t.status);
+    const sel = $('uStatus');
+    const known = U.STATUS_OPTIONS.find((s) => s.toLowerCase() === t.status.toLowerCase());
+    sel.innerHTML = (known ? '' : `<option value="">${U.esc(meta.label)}</option>`) +
+      U.STATUS_OPTIONS.map((s) => `<option value="${s}">${U.statusMeta(s).label}</option>`).join('');
+    sel.value = known || '';
+    sel.className = 'u-status chip ' + meta.cls;
+    sel.disabled = !(ub.sample || conn);
+
+    $('uMsgs').innerHTML = t.messages.map((m) => {
+      const sent = m.direction === 'Sent';
+      const who = sent ? 'You' : (U.parseFrom(m.from).name || name);
+      return `<div class="msg ${sent ? 'msg-sent' : 'msg-received'}"><div class="msg-meta">${U.esc(who)} · ${U.esc(U.fmtFull(m.date))}</div>${U.esc(m.body || '(no text)')}</div>`;
+    }).join('');
+  }
+
+  function openThread(id) {
+    ub.activeId = id;
+    const t = activeThread();
+    if (!t) return;
+    U.markRead(t);
+    switchScreen('thread');
+    window.scrollTo(0, document.body.scrollHeight); // newest message
+    renderUnibox();
+  }
+
+  let toastTimer = null;
+  function toast(text, isError, onClick) {
+    const el = $('toast');
+    el.textContent = text;
+    el.className = 'toast' + (isError ? ' error' : '');
+    el.hidden = false;
+    el.onclick = () => { el.hidden = true; if (onClick) onClick(); };
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { el.hidden = true; }, 5000);
+  }
+
+  $('uFilters').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ufilter]');
+    if (!b) return;
+    ub.filter = b.dataset.ufilter;
+    renderUnibox();
   });
-  $('resetBtn').addEventListener('click', () => {
-    store.del('config');
-    cfg = Object.assign({}, DEFAULT_CFG);
-    fillSettings();
-    schedule();
+  $('uMailbox').addEventListener('change', (e) => { ub.mailbox = e.target.value; renderUnibox(); });
+  $('uSearch').addEventListener('input', (e) => { ub.q = e.target.value; renderUnibox(); });
+  $('uItems').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-thread]');
+    if (b) openThread(b.dataset.thread);
+  });
+  $('uBack').addEventListener('click', () => switchScreen('unibox'));
+  $('uMarkAll').addEventListener('click', () => { U.markAllRead(ub.threads); renderUnibox(); });
+  $('uTrySample').addEventListener('click', () => {
+    const s = U.sampleData();
+    ub.sample = true;
+    ub.threads = U.buildThreads(s.msgs, U.leadIndex(s.crm));
+    renderUnibox();
+  });
+  $('uExitSample').addEventListener('click', () => {
+    ub.sample = false;
+    ub.threads = [];
+    loadUniboxCache();
+    renderUnibox();
     load();
   });
+  $('uStatus').addEventListener('change', async (e) => {
+    const t = activeThread();
+    if (!t || !e.target.value) return;
+    const prev = t.status;
+    t.status = e.target.value;
+    renderConversation();
+    if (ub.sample) return;
+    try {
+      t.status = await U.setStatus(conn, t.id, e.target.value);
+      toast(`Labeled as ${U.statusMeta(t.status).label}`);
+      load(); // refresh analytics with the new label
+    } catch (err) {
+      t.status = prev;
+      renderConversation();
+      toast(err.message, true);
+    }
+  });
+
+  // Links like #thread=<id> (tapping a phone notification) open that conversation.
+  function routeFromHash() {
+    const id = U.threadFromHash();
+    if (id) {
+      history.replaceState(null, '', location.pathname + location.search);
+      if (ub.threads.some((t) => t.id === id)) openThread(id);
+      else { ub.pendingId = id; switchScreen('unibox'); }
+    } else if (/[#&]unibox\b/.test(location.hash)) switchScreen('unibox');
+  }
+  window.addEventListener('hashchange', routeFromHash);
 
   /* ============== INSTALL ============== */
   let installPrompt = null;
@@ -934,7 +1220,7 @@
     const THRESHOLD = 70;
     let startY = null, dy = 0;
     window.addEventListener('touchstart', (e) => {
-      if (window.scrollY > 0 || state.loading || state.screen !== 'analytics') { startY = null; return; }
+      if (window.scrollY > 0 || state.loading || state.screen === 'settings') { startY = null; return; }
       startY = e.touches[0].clientY; dy = 0;
       ptr.classList.remove('settle');
     }, { passive: true });
@@ -999,7 +1285,9 @@
 
   /* ============== INIT ============== */
   if (loadCache()) render(); // show last data instantly, then refresh
-  if (!isConfigured()) switchScreen('settings'); // first run without a built-in sheet
+  loadUniboxCache();
+  if (!isConfigured()) switchScreen('settings'); // opened without the link: explain how to connect
+  else routeFromHash();
   load();
   schedule();
 })();
